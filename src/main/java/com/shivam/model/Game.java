@@ -2,16 +2,20 @@ package com.shivam.model;
 
 import java.util.Arrays;
 
-import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
+@Document(collection = "gamedirectory")
 public class Game {
-    
+
     private int _id;
     private String name;
     private String desc;
     private int yor;
     private int metascore;
     private String[] genre;
+
+    // Default constructor to support creation of bean
+    public Game(){}
     
     public Game(int _id, String name, String desc, int yor, int metascore, String[] genre) {
         this._id = _id;
@@ -21,6 +25,7 @@ public class Game {
         this.metascore = metascore;
         this.genre = genre;
     }
+
     public int get_id() {
         return _id;
     }
