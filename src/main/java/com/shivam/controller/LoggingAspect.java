@@ -9,6 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
+// @Aspect is important in AOP. Allows implementation of advices at specific points in app. 
+// Used in cross-cutting concerns
 @Aspect
 @Component
 public class LoggingAspect {
